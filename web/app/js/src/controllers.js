@@ -98,7 +98,7 @@ FunnyChatGenerator.controller('CanvasCtrl', ['$scope', '$interval', '$http',
                 window.open('https://twitter.com/intent/tweet?hashtags='+ window.hashtags + '&text=' + window.title + '&url=' + $scope.current_url);
             },
             wa: function(){
-                window.open('https://wa.me/?text=' + $scope.current_url);
+                window.open('https://wa.me/?text=' + encodeURIComponent($scope.current_url));
             },
             in: function(){
                 window.open('https://www.linkedin.com/shareArticle?mini=true&title=' + window.title + '&summary=' + window.description + '&url=' + $scope.current_url);

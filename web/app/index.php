@@ -11,7 +11,7 @@ function getData($img = 'demo')
     $data['title'] = "Funny Chat Generator";
     $data['description'] = "Create your funny chat screenshot for free.";
     $data['alt_description'] = "Generate WhatsApp like fake conversation online.";
-    $data['hashtags'] = "ChatGenerator,FakeWhatsapp";
+    $data['hashtags'] = "FunnyChatGenerator";
 
     if (file_exists(UPLOAD_DIR . "{$img}.png")) {
         $data['image'] = UPLOAD_DIR . "{$img}.png";
