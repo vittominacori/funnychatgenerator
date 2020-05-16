@@ -1,0 +1,370 @@
+@import "/bower_components/material-design-iconic-font/less/material-design-iconic-font.less";
+
+
+//*, *:before, *:after {
+//    box-sizing: inherit;
+//}
+//
+//html {
+//    box-sizing: border-box;
+//    height: 100%;
+//    margin: 0;
+//    padding: 0;
+//}
+//
+//body {
+//    -webkit-font-smoothing: antialiased;
+//    -moz-osx-font-smoothing: grayscale;
+//    font-family: "Roboto", sans-serif;
+//    margin: 0;
+//    padding: 0;
+//    height: 100%;
+//}
+
+.device {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: "Roboto", sans-serif;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .screen {
+        width: 100%;
+        height: 100%;
+        text-align: left;
+
+        .screen-container {
+            height: 100%;
+            // min-height: 640px;
+
+            /* Chat */
+
+            .chat {
+                height: calc(100%);
+
+                .chat-container {
+                    height: 100%;
+
+                    /* User Bar */
+
+                    .user-bar {
+                        height: 55px;
+                        background: #005e54;
+                        color: #fff;
+                        padding: 0 8px;
+                        font-size: 24px;
+                        position: relative;
+                        z-index: 1;
+
+                        &:after {
+                            content: "";
+                            display: table;
+                            clear: both;
+                        }
+
+                        div {
+                            float: left;
+                            transform: translateY(-50%);
+                            position: relative;
+                            top: 50%;
+                        }
+
+                        .actions {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            float: right;
+                            margin: 0 0 0 10px;
+
+                            &.more {
+                                margin: 0 12px 0 32px;
+                            }
+
+                            &.attachment {
+                                margin: 0 0 0 30px;
+
+                                i {
+                                    display: block;
+                                    transform: rotate(-45deg);
+                                }
+                            }
+                        }
+
+                        .avatar {
+                            margin: 0 0 0 5px;
+                            width: 36px;
+                            height: 36px;
+
+                            img {
+                                border-radius: 50%;
+                                box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+                                display: block;
+                                width: 100%;
+                            }
+                        }
+
+                        .name {
+                            font-size: 17px;
+                            font-weight: 600;
+                            text-overflow: ellipsis;
+                            letter-spacing: 0.3px;
+                            margin: 0 0 0 8px;
+                            overflow: hidden;
+                            white-space: nowrap;
+                            width: 140px;
+                        }
+
+                        .status {
+                            display: block;
+                            font-size: 13px;
+                            font-weight: 400;
+                            letter-spacing: 0;
+                        }
+                    }
+
+                    /* Conversation */
+
+                    .conversation {
+                        height: calc(100% - 12px);
+                        position: relative;
+                        background: #efe7dd url("../img/whatsapp/chat-background.jpg") repeat;
+                        z-index: 0;
+
+                        & ::-webkit-scrollbar {
+                            transition: all .5s;
+                            width: 5px;
+                            height: 1px;
+                            z-index: 10;
+                        }
+
+                        & ::-webkit-scrollbar-track {
+                            background: transparent;
+                        }
+
+                        & ::-webkit-scrollbar-thumb {
+                            background: #b3ada7;
+                        }
+
+                        .conversation-container {
+                            height: 440px;
+                            box-shadow: inset 0 10px 10px -10px #000000;
+                            overflow-x: hidden;
+                            padding: 0 16px;
+                            margin-bottom: 5px;
+
+                            &:after {
+                                content: "";
+                                display: table;
+                                clear: both;
+                            }
+
+                            /* Messages */
+
+                            .message {
+                                color: #000;
+                                clear: both;
+                                line-height: 18px;
+                                font-size: 15px;
+                                padding: 8px;
+                                position: relative;
+                                margin: 8px 0;
+                                max-width: 85%;
+                                word-wrap: break-word;
+                                z-index: -1;
+
+                                &:after {
+                                    position: absolute;
+                                    content: "";
+                                    width: 0;
+                                    height: 0;
+                                    border-style: solid;
+                                }
+
+                                .metadata {
+                                    display: inline-block;
+                                    float: right;
+                                    padding: 0 0 0 7px;
+                                    position: relative;
+                                    bottom: -8px;
+
+                                    .time {
+                                        color: rgba(0, 0, 0, .45);
+                                        font-size: 11px;
+                                        display: inline-block;
+                                    }
+
+                                    .tick {
+                                        display: inline-block;
+                                        margin-left: 2px;
+                                        position: relative;
+                                        top: 6px;
+                                        height: 16px;
+                                        width: 16px;
+
+                                        img {
+                                            width: 12px;
+                                            position: absolute;
+                                        }
+                                    }
+                                }
+
+                                &:first-child {
+                                    margin: 16px 0 8px;
+                                }
+
+                                &.received {
+                                    background: #fff;
+                                    border-radius: 0 5px 5px 5px;
+                                    float: left;
+
+                                    &:after {
+                                        border-width: 0 10px 10px 0;
+                                        border-color: transparent #fff transparent transparent;
+                                        top: 0;
+                                        left: -10px;
+                                    }
+
+                                    .metadata {
+                                        padding: 0 0 0 16px;
+                                    }
+                                }
+
+                                &.sent {
+                                    background: #e1ffc7;
+                                    border-radius: 5px 0 5px 5px;
+                                    float: right;
+
+                                    &:after {
+                                        border-width: 0 0 10px 10px;
+                                        border-color: transparent transparent transparent #e1ffc7;
+                                        top: 0;
+                                        right: -10px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    /* Compose */
+
+                    .conversation-compose {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: flex-end;
+                        overflow: hidden;
+                        height: 50px;
+                        width: 100%;
+                        z-index: 2;
+                        margin-bottom: 5px;
+
+                        div, input {
+                            background: #fff;
+                            height: 100%;
+                        }
+
+                        .emoji {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            background: white;
+                            border-radius: 5px 0 0 5px;
+                            flex: 0 0 auto;
+                            margin-left: 8px;
+                            width: 48px;
+                        }
+
+                        .input-msg {
+                            border: 0;
+                            flex: 1 1 auto;
+                            font-size: 16px;
+                            margin: 0;
+                            outline: none;
+                            min-width: 50px;
+                        }
+
+                        .photo {
+                            flex: 0 0 auto;
+                            border-radius: 0 0 5px 0;
+                            text-align: center;
+                            position: relative;
+                            width: 48px;
+
+                            &:after {
+                                border-width: 0 0 10px 10px;
+                                border-color: transparent transparent transparent #fff;
+                                border-style: solid;
+                                position: absolute;
+                                width: 0;
+                                height: 0;
+                                content: "";
+                                top: 0;
+                                right: -10px;
+                            }
+
+                            i {
+                                display: block;
+                                color: #7d8488;
+                                font-size: 24px;
+                                transform: translate(-50%, -50%);
+                                position: relative;
+                                top: 50%;
+                                left: 50%;
+                            }
+                        }
+
+                        .send {
+                            background: transparent;
+                            border: 0;
+                            flex: 0 0 auto;
+                            margin-left: 8px;
+                            margin-right: 8px;
+                            padding: 0;
+                            position: relative;
+                            outline: none;
+
+                            .circle {
+                                background: #008a7c;
+                                border-radius: 50%;
+                                color: #fff;
+                                position: relative;
+                                width: 48px;
+                                height: 48px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+
+                                i {
+                                    font-size: 24px;
+                                    margin-left: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Small Screens */
+
+@media (max-width: 320px) {
+
+    .device {
+        .screen {
+            .screen-container {
+                .chat {
+                    .chat-container {
+                        .user-bar {
+                            .name {
+                                width: 90px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

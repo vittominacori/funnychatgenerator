@@ -1,0 +1,90 @@
+<form class="editor" ng-submit="addMessage()">
+
+    <h2>User details</h2>
+
+    <div class="row">
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="user-name">Name</label>
+                <input type="text" class="form-control" id="user-name" ng-model="user.name">
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="user-status">Status</label>
+                <input type="text" class="form-control" id="user-status" ng-model="user.status">
+            </div>
+        </div>
+
+    </div>
+
+    <h2>Message details</h2>
+
+    <div class="row">
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Type</label>
+                <div class="radio">
+                    <label><input type="radio" ng-change="typeChanged()" ng-model="new_message.type" value="sent">Sent</label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" ng-change="typeChanged()" ng-model="new_message.type" value="received">Received</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Status</label>
+                <div class="radio">
+                    <label><input type="radio" ng-disabled="new_message.type === 'received'" ng-model="new_message.status" value="sent">Sent</label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" ng-disabled="new_message.type === 'received'" ng-model="new_message.status" value="delivered">Delivered</label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" ng-disabled="new_message.type === 'received'" ng-model="new_message.status" value="read">Read</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <div class="form-group">
+                <label for="message-text">Text</label>
+                <textarea ng-required="true" class="form-control" rows="4" id="message-text" ng-model="new_message.text"></textarea>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <div class="form-group">
+                <label for="message-time">Time</label>
+                <input type="text" class="form-control" id="message-time" ng-model="new_message.time">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-12">
+            <div class="form-group">
+                <button type="submit" class="btn-primary btn-block"><i class="icono-plusCircle"></i> Add message</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-12">
+            <div class="form-group">
+                <button type="button" class="btn-danger btn-block" ng-click="clear()"><i class="icono-trash"></i> Clear all messages</button>
+            </div>
+        </div>
+
+    </div>
+
+</form>

@@ -1,0 +1,8 @@
+vendor/
+!web/app/js/vendor
+.env
+.idea
+node_modules/
+bower_components/
+web/app/data
+!web/app/data/index.html

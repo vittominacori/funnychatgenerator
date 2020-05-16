@@ -1,0 +1,23 @@
+<meta name="description" content="{{ description }} {{ alt_description }}">
+
+<meta property="og:image" content="{{ screenshot }}" />
+<meta property="og:description" content="{{ description }} {{ alt_description }}" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="{{ title }}" />
+<meta property="og:url" content="{{ currentUrl }}" />
+
+<meta name="twitter:image" content="{{ screenshot }}" />
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ title }}" />
+<meta name="twitter:description" content="{{ description }} {{ alt_description }}">
+
+<title>{{ title }} | {{ description }}</title>
+
+<script>
+    Window.current_url = "{{ currentUrl }}";
+    Window.title = "{{ title }}";
+    Window.description = "{{ description }}";
+    Window.image = "{{ screenshot }}";
+    Window.hashtags = "{{ hashtags }}";
+    Window.is_demo = {{ is_demo }};
+</script>

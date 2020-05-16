@@ -1,0 +1,136 @@
+@import "/bower_components/icono/less/icono.less";
+@import "/bower_components/bootstrap/less/bootstrap.less";
+@import "variables.less";
+
+body {
+    margin: 0;
+    background: #fff;
+}
+
+h2 {
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    font-weight: 100;
+    border-bottom: 1px solid @gray;
+    text-align: center;
+}
+
+footer {
+
+    padding-top: 20px;
+    margin-top: 50px;
+    text-align: center;
+    background: url("../img/default-background.jpg") no-repeat;
+    background-size: cover;
+    color: #fff;
+
+    p {
+        padding: 10px;
+        margin: 0;
+    }
+}
+
+button {
+    cursor: pointer;
+    color: #fff;
+    background: @main-color;
+    font-size: 17px;
+    padding: 10px;
+    border: none;
+
+    &:hover {
+        background: multiply(@main-color, @gray);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.19);
+        top: -4px;
+    }
+
+    &.fb {
+        background: @facebook;
+        &:hover {
+            background: multiply(@facebook, @gray);
+        }
+    }
+
+    &.tw {
+        background: @twitter;
+        &:hover {
+            background: multiply(@twitter, @gray);
+        }
+    }
+
+    &.gp {
+        background: @gplus;
+        &:hover {
+            background: multiply(@gplus, @gray);
+        }
+    }
+
+    &.in {
+        background: @linkedin;
+        &:hover {
+            background: multiply(@linkedin, @gray);
+        }
+    }
+
+    [class*=icono-] {
+        color: #fff !important;
+    }
+}
+
+.jumbotron {
+    background: url("../img/default-background.jpg") no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+
+.device {
+    margin: auto;
+    width: 340px;
+    max-height: 640px;
+    max-width: 100%;
+}
+
+.generate-action {
+    margin-top: 20px;
+
+    button {
+        margin: auto;
+        width: 340px;
+        max-width: 100%;
+    }
+}
+
+.modal {
+    .img-responsive {
+        margin: auto;
+    }
+
+    .share-actions {
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+.adsense {
+    margin-top: 50px;
+    max-width: 100%;
+}
+
+#cookieChoiceInfo {
+    color: #fff;
+    //top: 0 !important;
+    bottom: 0 !important;
+    padding: 1vh !important;
+
+    a {
+        color: @main-color;
+        text-decoration: underline;
+    }
+}
+
+#cookieChoiceInfo > a:nth-child(2),a#cookieChoiceDismiss {
+
+}
+
+@import "modules/editor.less";
+@import "themes/whatsapp.less";

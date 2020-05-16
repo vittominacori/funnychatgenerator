@@ -1,0 +1,31 @@
+<!-- Modal -->
+<div class="modal fade" id="screenshot-modal" tabindex="-1" role="dialog" aria-labelledby="screenshot-modal-label">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="screenshot-modal-label">Your funny screenshot</h4>
+            </div>
+            <div class="modal-body">
+                <div class="img-result">
+                    {% verbatim %}
+                        <img class="img-responsive" ng-src="{{ image }}">
+                    {% endverbatim %}
+
+                    <div class="row share-actions">
+                        <div class="col-xs-6 col-xs-offset-3">
+                            <button type="button" class="btn-block" ng-click="download()"><i class="icono-share"></i> Download</button>
+                        </div>
+                    </div>
+                    <div class="row share-actions">
+                        <div class="col-md-12">
+                            {% include "/modules/share-buttons.twig" %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn-info" data-dismiss="modal"><i class="icono-reset"></i> Close and create new</button>
+            </div>
+        </div>
+    </div>
+</div>

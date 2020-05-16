@@ -1,0 +1,44 @@
+{% extends 'basic_template.twig' %}
+{% block content %}
+
+    <div class="jumbotron">
+        <div class="container">
+            <h1>{{ title }}</h1>
+            <p>
+                {{ description }}
+                <br>
+                {{ alt_description }}
+            </p>
+        </div>
+    </div>
+
+    <section class="container">
+
+        <div class="row">
+            <div class="col-md-5 col-md-offset-1">
+                {% include '/modules/editor.twig' %}
+            </div>
+            <div class="col-md-5">
+
+                <h2>Preview</h2>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="device" class="device">
+                            {% include '/themes/whatsapp.twig' %}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row generate-action">
+                    <div class="col-md-12">
+                        <button class="btn-block" ng-click="takePicture()"><i class="icono-camera"></i> Create your screenshot</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+{% endblock %}
