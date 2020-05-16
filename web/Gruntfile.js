@@ -12,9 +12,9 @@ module.exports = function(grunt) {
             },
             plugins: {
                 src: [
-                    'bower_components/jquery/dist/jquery.min.js',
-                    'bower_components/bootstrap/dist/js/bootstrap.min.js',
-                    'bower_components/angular/angular.min.js',
+                    'node_modules/jquery/dist/jquery.min.js',
+                    'node_modules/bootstrap/dist/js/bootstrap.min.js',
+                    'node_modules/angular/angular.min.js',
                     'app/js/vendor/html2canvas.js',
                     'app/js/vendor/cookiechoices.js'
                 ],
@@ -105,7 +105,7 @@ module.exports = function(grunt) {
 
     // DEFAULT TASK(S)
     // ---------------
-    grunt.registerTask('default', [
+    grunt.registerTask('assets', [
         'jshint:all',
         'concat:frontend',
         'concat:app',
@@ -115,7 +115,7 @@ module.exports = function(grunt) {
 
     // START TASK(S)
     // -------------------------
-    grunt.registerTask('start', [
+    grunt.registerTask('plugins', [
         'concat:plugins'
     ]);
 };
