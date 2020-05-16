@@ -40,8 +40,8 @@ FunnyChatGenerator.controller('CanvasCtrl', ['$scope', '$interval', '$http',
             }
         ];
 
-        $scope.image = Window.image;
-        $scope.current_url = Window.current_url;
+        $scope.image = window.image;
+        $scope.current_url = window.current_url;
 
         $scope.typeChanged = function() {
             $scope.new_message.status = $scope.new_message.type === 'sent' ? 'delivered' : '';
@@ -95,13 +95,13 @@ FunnyChatGenerator.controller('CanvasCtrl', ['$scope', '$interval', '$http',
                 window.open('https://www.facebook.com/sharer/sharer.php?u=' + $scope.current_url);
             },
             tweet: function(){
-                window.open('https://twitter.com/intent/tweet?hashtags='+ Window.hashtags + '&text=' + Window.title + '&url=' + $scope.current_url);
+                window.open('https://twitter.com/intent/tweet?hashtags='+ window.hashtags + '&text=' + window.title + '&url=' + $scope.current_url);
             },
-            gplus: function(){
-                window.open('https://plus.google.com/share?url=' + $scope.current_url);
+            wa: function(){
+                window.open('https://wa.me/?text=' + $scope.current_url);
             },
             in: function(){
-                window.open('https://www.linkedin.com/shareArticle?mini=true&title=' + Window.title + '&summary=' + Window.description + '&url=' + $scope.current_url);
+                window.open('https://www.linkedin.com/shareArticle?mini=true&title=' + window.title + '&summary=' + window.description + '&url=' + $scope.current_url);
             }
         };
 

@@ -1,7 +1,7 @@
 {
   "name": "funny-chat-generator",
   "version": "1.0.0",
-  "description": "",
+  "description": "Create your funny chat screenshot for free.",
   "main": "index.js",
   "scripts": {
     "build:plugins": "grunt plugins",
@@ -9,8 +9,22 @@
     "watch": "grunt watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vittominacori/funnychatgenerator.git"
+  },
+  "homepage": "https://vittominacori.github.io/funnychatgenerator",
+  "bugs": {
+    "url": "https://github.com/vittominacori/funnychatgenerator/issues"
+  },
+  "author": "Vittorio Minacori",
+  "contributors": [
+    {
+      "name": "Vittorio Minacori",
+      "url": "https://github.com/vittominacori"
+    }
+  ],
+  "license": "MIT",
   "dependencies": {
     "angular": "^1.7.9",
     "bootstrap": "^3.4.1",

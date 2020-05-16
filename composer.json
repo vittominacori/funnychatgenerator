@@ -1,4 +1,18 @@
 {
+    "name": "vittominacori/funnychatgenerator",
+    "description": "Create your funny chat screenshot for free.",
+    "homepage": "https://funnychatgenerator.herokuapp.com",
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/vittominacori/funnychatgenerator/issues",
+        "source": "https://github.com/vittominacori/funnychatgenerator"
+    },
+    "authors": [
+        {
+            "name": "Vittorio Minacori",
+            "homepage": "https://github.com/vittominacori"
+        }
+    ],
     "require" : {
         "silex/silex": "^1.0",
         "monolog/monolog": "^1.0",
