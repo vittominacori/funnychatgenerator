@@ -4169,6 +4169,8 @@ FunnyChatGenerator.controller('CanvasCtrl', ['$scope', '$interval', '$http',
             document.location.href = '#';
 
             html2canvas(document.querySelector("#device")).then(function(canvas) {
+                $('#waiting-modal').modal('show');
+
                 $http({
                     method: 'POST',
                     url: 'upload',
@@ -4176,6 +4178,8 @@ FunnyChatGenerator.controller('CanvasCtrl', ['$scope', '$interval', '$http',
                     headers: {'Content-Type': 'application/x-www-form-urlencoded'}
                 })
                     .then(function(res) {
+                        $('#waiting-modal').modal('hide');
+
                         if(res.data.status === 1){
                             $scope.image = res.data.image;
                             $scope.current_url = res.data.page_url;
